@@ -1,7 +1,7 @@
-run: testarg 
-	./testarg   6.2 -8 2.0
-testarg: testarg.c
-	gcc -o testarg -Wall testarg.c
+run: test
+	./test Bonsoir Bonjour
+test: algoFichiers.c
+	gcc -o test -Wall algoFichiers.c
 clean:
-	rm testarg
+	rm exec
 	ls 
