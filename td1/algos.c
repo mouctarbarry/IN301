@@ -29,34 +29,32 @@ int recherche (int x){
 	nb_line=0;
 	while (fscanf (fic, "%d", &T[nb_line]) != EOF){
 		cpt ++;
-		if (T[nb_line] == x){ printf (" Nombre de comparaison %d ", cpt);
+		if (T[nb_line] == x){ printf (" Nombre de comparaison %d \n", cpt);
 			return 1;
 			}
 		nb_line++;
 		}
-		printf (" Nombre de comparaison %d ", cpt);
+		printf (" Nombre de comparaison %d \n", cpt);
 		return 0;
 	}
 
 int stat_recherche (int x){
 	int cpt=0;
-	nb_line=0;
-	while (T[nb_line] != EOF){
+	FILE *f =NULL;
+	f = fopen (NOMFIC, "r");
+	while (fscanf (f, "%d \n", &T[nb_line]) != EOF){
+		cpt++;
 		if (T[nb_line]==x){
-			cpt++;
 			return cpt;
-			}
 		}
-		return cpt;
+		nb_line++;
+	}
+	return cpt;
 	}
 
 int main (){
 	lecture();
 	ecrire_tab();
-	/*
-	int a = recherche (123);
-	printf ("pour 123 %d \n", a);
-	a = recherche (445478);
-	printf ("pour 427261 %d \n", a);*/
-	
-	}
+	printf("%d\n", recherche (3));
+	printf ("%d \n ", stat_recherche (3));
+}

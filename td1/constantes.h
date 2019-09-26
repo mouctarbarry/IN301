@@ -1,3 +1,3 @@
-#define N 100
-#define MAX 1000
+#define N 10
+#define MAX 5
 #define NOMFIC "nombres.data"

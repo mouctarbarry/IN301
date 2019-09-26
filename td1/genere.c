@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include "constantes.h"
-
 void ecrire (){
 	int nombres;
 	FILE *fichier = NULL;
