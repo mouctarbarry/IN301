@@ -1,6 +1,6 @@
-run: exo11
-	./pointeur
-exo11: exo11.c
-	gcc -o pointeur -Wall exo11.c
+run: tableaux
+	./tableaux
+tableaux: tableaux.c
+	gcc -o tableaux -Wall tableaux.c
 clean:
-	rm pointeur 
+	rm tableaux
