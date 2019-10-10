@@ -23,5 +23,7 @@ int verif_si_tableau_croissant (TABINT T);
 
 void scan_ech_tabint (TABINT T, int fin);
 
+void fusion (TABINT T, int deb, int mil, int fin ); 
+
 
 #endif
