@@ -9,7 +9,7 @@ int main (){
 	TABINT tab ;
 	tab = gen_alea_tabint (20, 20);
 	aff_tabint (tab);
-	tri_fusion_tabint (tab, 0, 19);
+	tri_fusion_tabint (tab, 1, 20);
 	aff_tabint (tab);
  
  return 0;	
