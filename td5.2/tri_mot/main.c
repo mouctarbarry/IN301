@@ -25,7 +25,7 @@ int main(int argc, char** argv){
   chrono_start();
   tri_cmp(t2);
   printf("Duree d'execution du tri par comparaison: %f millisecondes\n", 1000*chrono_lap());
-  //affiche_tab(t2);
+  affiche_tab(t2);
   t2 = libere_tab(t2);
 
   return EXIT_SUCCESS;
