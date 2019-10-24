@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "liste.h"
 
 int main (){
-
+srand (time (NULL));
 struct  liste *lv = NULL;
 struct  liste *l1  =  malloc (sizeof (struct liste));
 
@@ -36,5 +37,65 @@ affiche_iter (lv);
 
 lv = supprimer_deb (lv);
 affiche_iter (lv);
+
+lv = inserer_fin_iter (lv, 3);
+affiche_iter (lv);
+
+//créons une liste de 10 elements 
+struct liste *l10 = malloc (sizeof (struct liste));
+int i=0;
+while (i<10){
+	 l10->val=  rand ()% 100;
+	 l10->suiv = malloc (sizeof (struct liste));
+	 l10 = l10->suiv;  
+	 i++;
+	}
+	//l10->suiv = NULL;
+	//affiche_iter (l10);
+
+
+lv = inserer_fin_rec (lv, 02);
+lv = inserer_fin_rec (lv, 44);
+lv = inserer_fin_rec (lv, 58);
+affiche_iter (lv);
+
+supprimer_fin_iter (lv);
+affiche_iter (lv);
+
+supprimer_fin_rec (lv);
+affiche_iter (lv);
+
+printf("sup de 23\n");
+supprimer_mil_rec (lv, 23);
+affiche_iter (lv);
+
+printf("sup de 17\n");
+supprimer_mil_iter (lv, 17);
+
+affiche_iter(lv);
+printf ("supp de 10\n");
+lv=supprimer_mil_iter (lv, 10);
+affiche_iter(lv);
+
+lv = inserer_trie_rec (lv, 4);
+lv = inserer_trie_rec (lv, 1);
+lv = inserer_trie_rec (lv, 5);
+affiche_iter(lv);
+
+
 return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
